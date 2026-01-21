@@ -1,42 +1,100 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* BODY */
+body {
+  font-family: "Orbitron", "Inter", sans-serif;
+  background: radial-gradient(circle at top, #0ff, #020617 60%);
+  color: #e5e7eb;
+  overflow: hidden;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* APP CENTER */
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* BACKGROUND GLOW */
+.glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #22d3ee, transparent 70%);
+  filter: blur(120px);
+  z-index: 0;
 }
 
+/* CARD */
 .card {
-  padding: 2em;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 500px;
+  padding: 32px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 0 40px rgba(34, 211, 238, 0.4),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
-.read-the-docs {
-  color: #888;
+/* GREETING */
+.greeting h1 {
+  text-align: center;
+  font-size: 2.3rem;
+  background: linear-gradient(90deg, #22d3ee, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+.greeting p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #a5f3fc;
+  margin-bottom: 28px;
+}
+
+/* BIODATA */
+.biodata {
+  padding: 14px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.biodata p {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.biodata span {
+  color: #67e8f9;
+}
+
+.biodata strong {
+  color: #f0f9ff;
+  font-weight: 600;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  box-shadow:
+    0 0 60px rgba(34, 211, 238, 0.8),
+    0 0 120px rgba(168, 85, 247, 0.4);
+  transition: 0.4s ease;
 }

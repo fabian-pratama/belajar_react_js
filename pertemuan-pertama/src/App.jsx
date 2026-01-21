@@ -3,31 +3,44 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+function Greeting() {
+  return (
+    <>
+      <div className="greeting">
+      <h1>Halo NiiiiiiigasdsSS</h1>
+      <p>RRRRAarrrraaaaattttttaaaAsAsA</p>
+      </div>
+    </>
+  )
+}
+
+function Biodata(props) {
+  return (
+    <>
+      <div className="biodata">
+      <p><span>Nama</span> <strong>{props.nama}</strong></p>
+      <p><span>Kelas</span> <strong>{props.kelas}</strong></p>
+      <p><span>NISN</span> <strong>{props.nisn}</strong></p>
+      </div>
+    </>
+  )
+}
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
+      <div className="app">
+      <div className="glow"></div>
+
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <Greeting />
+        <Biodata nama="Fabian" kelas="XI PPLG 1" nisn="177513" />
+        <Biodata nama="Fabsskuyy" kelas="XI PPLG 1" nisn="177513" />
+        <Biodata nama="Fabegro" kelas="XI PPLG 1" nisn="177513" />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      </div>
     </>
   )
 }
